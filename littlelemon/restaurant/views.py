@@ -9,7 +9,7 @@ from .models import Booking, Menu
 from .serializers import bookingSerializer, menuSerializer
 
 # Create your views here.
-class bookingViewSet(viewsets.ModelViewSet):
+class bookingViewSet(ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = Booking.objects.all()
     serializer_class = bookingSerializer
